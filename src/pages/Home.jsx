@@ -92,8 +92,8 @@ const Home = () => {
                             <div
                                 key={app.id}
                                 onClick={() => navigate(`/apps/${app.id}`)}
-                                className="border p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-                                <img src={app.image} alt={app.name}
+                                className="border p-4 rounded-lg shadow-md hover:shadow-lg cursor-pointer transition">
+                                <img src={app.image} alt={app.title}
                                     className="w-full h-48 object-cover rounded-md mb-4" />
                                 <h2 className="text-xl font-bold mb-2">{app.title}</h2>
                                 <div className='flex justify-between items-center'>

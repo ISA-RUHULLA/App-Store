@@ -1,6 +1,6 @@
 [
   {
-    "image": "https://cdn.example.com/apps/chatplus.png",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFGL99HYg2TA1ncl9hRrhA6nuZztpd5l_Xvg&s",
     "title": "ChatPlus",
     "companyName": "NovaSoft Ltd.",
     "id": 1,
@@ -18,7 +18,7 @@
     ]
   },
   {
-    "image": "https://cdn.example.com/apps/fittrack.png",
+    "image": "https://play-lh.googleusercontent.com/5SLG2s107uPPgbkjFsKxdEMI8P85FDxZzZ2lXsryBxP3DhcH49ILOtW7verzgV6Xoavz",
     "title": "FitTrack",
     "companyName": "WellnessTech",
     "id": 2,
@@ -36,7 +36,7 @@
     ]
   },
   {
-    "image": "https://cdn.example.com/apps/pixart.png",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRP2cRhBugYrQNbC4tzKg4WAWtAnZwHqL-ieA&s",
     "title": "PixArt Studio",
     "companyName": "ArtoCode",
     "id": 3,
@@ -54,7 +54,7 @@
     ]
   },
   {
-    "image": "https://cdn.example.com/apps/learnhub.png",
+    "image": "https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/002/472/462/datas/original.jpg",
     "title": "LearnHub",
     "companyName": "EduNova",
     "id": 4,
@@ -72,7 +72,7 @@
     ]
   },
   {
-    "image": "https://cdn.example.com/apps/shopzone.png",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrLgWDaZlcdAkKr0S-c_876pwziBSWPZLlKA&s",
     "title": "ShopZone",
     "companyName": "BuySmart Inc.",
     "id": 5,
@@ -90,7 +90,7 @@
     ]
   },
   {
-    "image": "https://cdn.example.com/apps/travelmate.png",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3Y8tpOmWoxWnfbQlqr7D3yVDuXN7Oh_b4mg&s",
     "title": "TravelMate",
     "companyName": "GlobeTech",
     "id": 6,
@@ -108,7 +108,7 @@
     ]
   },
   {
-    "image": "https://cdn.example.com/apps/musicfy.png",
+    "image": "https://www.toolpilot.ai/cdn/shop/files/766f01ef66ca4bd56af58e25a70fbf1b.jpg?v=1693394315",
     "title": "MusicFy",
     "companyName": "SoundLabs",
     "id": 7,
@@ -126,7 +126,7 @@
     ]
   },
   {
-    "image": "https://cdn.example.com/apps/gamerise.png",
+    "image": "https://media.istockphoto.com/id/1158091808/vector/gamer-mascot-logo-sticker-design-vector-illustration.jpg?s=1024x1024&w=is&k=20&c=vCKyTiZ-wvOlYw_9__TBvcdI7A3okrnovjW6kDaepXU=",
     "title": "GameRise",
     "companyName": "PlayHub Studios",
     "id": 8,
@@ -144,7 +144,7 @@
     ]
   },
   {
-    "image": "https://cdn.example.com/apps/docucloud.png",
+    "image": "https://img.freepik.com/premium-vector/cloud-document-logo-design-template_18099-2368.jpg?w=360",
     "title": "DocuCloud",
     "companyName": "SkyVault Systems",
     "id": 9,
@@ -162,7 +162,7 @@
     ]
   },
   {
-    "image": "https://cdn.example.com/apps/newsflash.png",
+    "image": "https://static.vecteezy.com/system/resources/previews/025/916/604/non_2x/breaking-news-icon-illustration-logo-design-vector.jpg",
     "title": "NewsFlash",
     "companyName": "InfoStream Media",
     "id": 10,
@@ -180,7 +180,7 @@
     ]
   },
   {
-    "image": "https://cdn.example.com/apps/cooksmart.png",
+    "image": "https://cdn.vectorstock.com/i/2000v/57/37/modern-smart-cook-logo-vector-17425737.webp",
     "title": "CookSmart",
     "companyName": "Chefify Labs",
     "id": 11,
@@ -198,7 +198,7 @@
     ]
   },
   {
-    "image": "https://cdn.example.com/apps/weathergo.png",
+    "image": "https://img.freepik.com/premium-vector/weather-cloud-sun-rain-lightning-logo-design-symbol-icon-template_23729-1774.jpg?semt=ais_hybrid&w=740&q=80",
     "title": "WeatherGo",
     "companyName": "SkyCast Analytics",
     "id": 12,
@@ -216,7 +216,7 @@
     ]
   },
   {
-    "image": "https://cdn.example.com/apps/finwise.png",
+    "image": "https://static.wixstatic.com/media/c1a032_3e16d4e91c934419bf1330aaa380ece1~mv2.png/v1/fit/w_2500,h_1330,al_c/c1a032_3e16d4e91c934419bf1330aaa380ece1~mv2.png",
     "title": "FinWise",
     "companyName": "MoneyTree Solutions",
     "id": 13,
@@ -234,7 +234,7 @@
     ]
   },
   {
-    "image": "https://cdn.example.com/apps/langly.png",
+    "image": "https://www.langly.co/cdn/shop/files/Untitled_design_-_2022-08-13T171749.685_600x.png?v=1660367889",
     "title": "Langly",
     "companyName": "LinguaTech",
     "id": 14,
@@ -252,7 +252,7 @@
     ]
   },
   {
-    "image": "https://cdn.example.com/apps/securevault.png",
+    "image": "https://i.fbcd.co/products/resized/resized-750-500/619-7a04b563f6d59f16b0c8ef0e3b1a23ea1668f4dba957478dcfbd65e8c503a741.jpg",
     "title": "SecureVault",
     "companyName": "Lockify Tech",
     "id": 15,
@@ -270,7 +270,7 @@
     ]
   },
   {
-    "image": "https://cdn.example.com/apps/booknest.png",
+    "image": "https://img.freepik.com/free-vector/hand-drawn-bookstore-logo_23-2149331310.jpg?semt=ais_hybrid&w=740&q=80",
     "title": "BookNest",
     "companyName": "Readify",
     "id": 16,
@@ -288,7 +288,7 @@
     ]
   },
   {
-    "image": "https://cdn.example.com/apps/healthsync.png",
+    "image": "https://img.freepik.com/premium-vector/abstract-modern-health-telemedicine-logo_1248848-22735.jpg",
     "title": "HealthSync",
     "companyName": "VitalCore",
     "id": 17,
@@ -306,7 +306,7 @@
     ]
   },
   {
-    "image": "https://cdn.example.com/apps/taskpro.png",
+    "image": "https://images.squarespace-cdn.com/content/v1/6573b57baa14197519767fc4/f1da0ed9-db78-4858-96cc-04019d86a778/163273171_padded_logo.png",
     "title": "TaskPro",
     "companyName": "ProductiveHub",
     "id": 18,
@@ -324,7 +324,7 @@
     ]
   },
   {
-    "image": "https://cdn.example.com/apps/moviebox.png",
+    "image": "https://img.freepik.com/premium-vector/movie-box-logo-template-design_316488-1548.jpg",
     "title": "MovieBox",
     "companyName": "StreamWorld",
     "id": 19,
@@ -342,7 +342,7 @@
     ]
   },
   {
-    "image": "https://cdn.example.com/apps/drivefast.png",
+    "image": "https://static.vecteezy.com/system/resources/previews/047/105/326/non_2x/usb-fast-drive-logo-design-tech-symbol-icon-logo-illustration-vector.jpg",
     "title": "DriveFast",
     "companyName": "RideLink Pvt. Ltd.",
     "id": 20,
