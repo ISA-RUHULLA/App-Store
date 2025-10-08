@@ -2,6 +2,8 @@ import React from 'react';
 import { useEffect, useState } from 'react';
 import Hero from '../assets/hero.png';
 import { useNavigate } from 'react-router-dom';
+import DownIcon from '../assets/icon-downloads.png'
+import RtIcon from '../assets/icon-ratings.png'
 
 const Home = () => {
  const [apps, setApps] = useState([]);
@@ -97,8 +99,8 @@ const Home = () => {
                                     className="w-full h-48 object-cover rounded-md mb-4" />
                                 <h2 className="text-xl font-bold mb-2">{app.title}</h2>
                                 <div className='flex justify-between items-center'>
-                                    <p className='font-bold text-green-500 rounded bg-green-100 px-2'>{app.downloads}</p>
-                                    <p className='font-bold text-orange-500 rounded bg-orange-200 px-2'>{app.ratingAvg}</p>
+                                    <p className='flex font-bold text-green-500 rounded bg-green-100 px-2'><img src={DownIcon} alt="Download" className='w-3 h-4 mt-1 mr-1' />{app.downloads}</p>
+                                    <p className='flex font-bold text-orange-500 rounded bg-orange-200 px-2'><img src={RtIcon} alt="" className='w-3 h-4 mt-1 mr-1' />{app.ratingAvg}</p>
                                 </div>
                             </div>
                         ))

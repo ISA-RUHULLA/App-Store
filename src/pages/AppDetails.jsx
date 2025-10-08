@@ -54,7 +54,7 @@ const AppDetails = () => {
 
     if (!app) return <h2 className="text-center mt-20 text-gray-500"><ErrorPage /></h2>;
     return (
-        <div>
+        <div className='bg-gray-100 p-4'>
             <div className="flex flex-col md:flex-row gap-10  mb-10">
                 <img src={app.image} alt={app.title} className="w-68 h-68 object-cover rounded-lg" />
                 <div className='w-full'>
@@ -87,6 +87,10 @@ const AppDetails = () => {
             </div>
             <div>
                 <AppRatingBar ratingsData={(app.ratings)} />
+            </div>
+            <div className='flex flex-col text-start mt-7'>
+                <h1 className='font-bold text-2xl mb-3'>Description</h1>
+                <p>{app.description}</p>
             </div>
         </div>
     );

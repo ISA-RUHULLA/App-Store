@@ -12,13 +12,13 @@ import {
 const AppRatingBar = ({ratingsData}) => {
  console.log("ratingsData", ratingsData)
   return (
-    <div style={{ width: "100%", height: 300 }}>
-      <h3 style={{ textAlign: "center", marginBottom: "10px" }}>Ratings</h3>
+    <div style={{ width: "100%", height: 300 }} >
+      <h3 className="font-bold text-2xl text-start">Ratings</h3>
       <ResponsiveContainer width="100%" height="100%">
         <BarChart
           layout="vertical"
           data={ratingsData}
-          margin={{ top: 20, right: 30, left: 60, bottom: 20 }}
+          margin={{ top: 20, right: 30, left:0, bottom: 20 }}
         >
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis type="number" />
