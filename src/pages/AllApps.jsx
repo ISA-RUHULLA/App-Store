@@ -1,5 +1,6 @@
 import React, { use, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import NotFoundPage from './NotFoundPage';
 
 const AllApps = () => {
     const [apps, setApps] = React.useState([]);
@@ -50,7 +51,7 @@ const AllApps = () => {
                     ))}
                 </div>
             ) : (
-                <p className='mt-8 text-gray-500'>No Apps Found</p>
+                <p className='mt-8 text-gray-500'><NotFoundPage/></p>
             )}
         </div>
     );

@@ -1,17 +1,20 @@
 import React, { useEffect, useState } from 'react';
+import toast from 'react-hot-toast';
 import { useNavigate, useParams } from 'react-router-dom';
 import DownIcon from '../assets/icon-downloads.png'
 import RetIcon from '../assets/icon-ratings.png'
 import RevIcon from '../assets/icon-review.png'
+import ErrorPage from './ErrorPage';
+import AppRatingBar from './AppRatingBar';
 
 const AppDetails = () => {
     const { id } = useParams();
     const [app, setApp] = useState();
     const [loading, setLoading] = useState();
-    const [isInstalled, setInstalled] =  useState(false);
+    const [isInstalled, setInstalled] = useState(false);
     const navigate = useNavigate();
     useEffect(() => {
-        fetch("/public/appData.json")
+        fetch("/appData.json")
             .then((res) => res.json())
             .then((data) => {
                 const found = data.find((item) => item.id === parseInt(id))
@@ -19,33 +22,37 @@ const AppDetails = () => {
                 setApp(found);
                 setLoading(false);
 
-                
-            })
-    },[id]);
 
-    useEffect (() => {
-        if(app) {
-            const installedApps =JSON.parse(localStorage.getItem("installedApps")) || [];
-                if(installedApps.includes(app.id)){
-                    setInstalled(true);
-                }
+            })
+    }, [id]);
+
+    useEffect(() => {
+        if (app) {
+            const installedApps = JSON.parse(localStorage.getItem("installedApps")) || [];
+            if (installedApps.includes(app.id)) {
+                setInstalled(true);
+            }
         }
-    },[app]);
+    }, [app]);
 
 
     const handleInstall = () => {
-       const installedApps = JSON.parse(localStorage.getItem("installedApps")) || [];
+        const installedApps = JSON.parse(localStorage.getItem("installedApps")) || [];
 
-       if(!installedApps.includes(app.id)){
+        if (installedApps.includes(app.id)) {
+            toast.error(`${app.title} is already installed!`);
+            return;
+        }
         installedApps.push(app.id)
         localStorage.setItem("installedApps", JSON.stringify(installedApps))
         setInstalled(true);
-       }
-       localStorage.setItem("installationAppData", JSON.stringify(app));
-    //    navigate("/installation");
+        toast.success(`${app.title} installed successfully!`);
+
+        localStorage.setItem("installationAppData", JSON.stringify(app));
+
     }
-    
-    if (!app) return <h2 className="text-center mt-20 text-gray-500">App Not Found</h2>;
+
+    if (!app) return <h2 className="text-center mt-20 text-gray-500"><ErrorPage /></h2>;
     return (
         <div>
             <div className="flex flex-col md:flex-row gap-10  mb-10">
@@ -72,11 +79,14 @@ const AppDetails = () => {
                                 <p className='font-black text-2xl'>{app.reviews.toLocaleString()}</p>
                             </div>
                         </div>
-                        <button onClick={handleInstall} disabled={isInstalled} className='btn font-bold text-2xl text-white mt-4 px-5 py-2 rounded-lg border bg-green-400'>{isInstalled ? "Installed" : `Install Now (${app.size})`}</button>
+                        <button onClick={handleInstall} className='btn font-bold text-2xl text-white mt-4 px-5 py-2 rounded-lg border bg-green-400'>{isInstalled ? "Installed" : `Install Now (${app.size})`}</button>
                     </div>
-                    
-                   
+
+
                 </div>
+            </div>
+            <div>
+                <AppRatingBar ratingsData={(app.ratings)} />
             </div>
         </div>
     );

@@ -7,6 +7,8 @@ import Installation from './pages/Installation'
 import ErrorPage from './pages/ErrorPage'
 import { Routes, Route } from 'react-router-dom'
 import './App.css'
+import { Toaster } from 'react-hot-toast'
+import NotFoundPage from './pages/NotFoundPage'
 
 function App() {
   return (
@@ -17,9 +19,12 @@ function App() {
         <Route path="/apps" element={<AllApps />} />
         <Route path="/apps/:id" element={<AppDetails />} />
         <Route path="/installation" element={<Installation />} />
-        <Route path="*" element={<ErrorPage />} />
+        <Route path="*" element={<ErrorPage />} />        
+        <Route path="/apps" element={<NotFoundPage />} />        
+
       </Routes>
       <Footer />
+      <Toaster/>
     </>
   )
 }
