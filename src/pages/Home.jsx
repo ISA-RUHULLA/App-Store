@@ -35,7 +35,7 @@ const Home = () => {
                     <br />
                     <span className='text-purple-500'>Productive</span> Apps
                 </h1>
-                <p className='mt-4 text-gray-600 font-semibold'>
+                <p className='mt-4 p-2 text-gray-600 font-semibold'>
                     At HERO.IO, we craft innovative apps designed to make everyday life simpler, smarter, and more exciting.
                       <br /> Our goal is to turn your ideas into digital experiences that truly make an impact.
                 </p>
@@ -90,7 +90,7 @@ const Home = () => {
             <section>
                 <div>
                     <h1 className='text-4xl text-black font-bold text-center mt-12'>Trending Apps</h1>
-                    <p className='text-center text-gray-600 mt-4'>Explore All Trending Apps on the Market developed by us</p>
+                    <p className='text-center text-gray-600 p-2 mt-4'>Explore All Trending Apps on the Market developed by us</p>
                     
                 </div>
                 <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6'>
@@ -102,7 +102,7 @@ const Home = () => {
                                 className="border p-4 rounded-lg shadow-md hover:shadow-lg cursor-pointer transition">
                                 <img src={app.image} alt={app.title}
                                     className="w-full h-48 object-cover rounded-md mb-4" />
-                                <h2 className="text-xl font-bold mb-2">{app.title}</h2>
+                                <h2 className="text-xl text-black font-bold mb-2">{app.title}</h2>
                                 <div className='flex justify-between items-center'>
                                     <p className='flex font-bold text-green-500 rounded bg-green-100 px-2'><img src={DownIcon} alt="Download" className='w-3 h-4 mt-1 mr-1' />{app.downloads}</p>
                                     <p className='flex font-bold text-orange-500 rounded bg-orange-200 px-2'><img src={RtIcon} alt="" className='w-3 h-4 mt-1 mr-1' />{app.ratingAvg}</p>

@@ -7,12 +7,12 @@ import logo from '../assets/logo.png';
 const Header = () => {
     return (
         <header className="flex items-center justify-between px-3 py-3 bg-white">
-      <Link to="/" className="flex items-center gap-2">
+      <Link to="/" className="flex flex-col md:flex-row lg:flex-row items-center gap-2">
         <img src={logo} alt="logo" className="w-10" />
         <h1 className="text-xl font-bold text-purple-500">HERO.IO</h1>
       </Link>
 
-      <nav className="flex gap-6">
+      <nav className="flex flex-col md:flex-row lg:flex row md:gap-6 lg:gap-6">
         <NavLink
           to="/"
           className={({ isActive }) =>
@@ -42,9 +42,9 @@ const Header = () => {
       <a
         href="https://github.com/ISA-RUHULLA"
         target="_blank"
-        className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600"
+        className="bg-blue-500 text-white md:px-4 py-2 rounded-lg w-24 md:w-auto hover:bg-blue-600"
       >
-        <FontAwesomeIcon icon={faGithub} size="xl" className='mr-3'/>
+        <FontAwesomeIcon icon={faGithub} size="xl" className='md:mr-3'/>
         Contribution
       </a>
     </header>
