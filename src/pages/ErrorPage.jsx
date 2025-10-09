@@ -6,7 +6,7 @@ const ErrorPage = () => {
     const navigate = useNavigate();
     return (
         <div>
-            <div className='flex flex-col justify-center items-center'>
+            <div className='flex flex-col bg-gray-100 justify-center items-center'>
                 <img src={ErrorIcon} alt="OPPS!! APP NOT FOUND" className='w-74 h-74'/>
             <h1 className='font-bold text-3xl text-black mt-5'>Oops, page not found!</h1>
             <p className='font-normal mt-2'>The page you are looking for is not available.</p>
@@ -20,3 +20,4 @@ const ErrorPage = () => {
 };
 
 export default ErrorPage;
+

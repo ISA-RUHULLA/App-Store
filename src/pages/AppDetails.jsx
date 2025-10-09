@@ -7,6 +7,7 @@ import RevIcon from '../assets/icon-review.png'
 import ErrorPage from './ErrorPage';
 import AppRatingBar from './AppRatingBar';
 import Loader from "../components/Loader";
+import NotFoundPage from './NotFoundPage';
 
 const AppDetails = () => {
     const { id } = useParams();
@@ -57,7 +58,7 @@ const AppDetails = () => {
         return <Loader />;
     }
 
-    if (!app) return <h2 className="text-center mt-20 text-gray-500"><ErrorPage /></h2>;
+    if (!app) return <h2 className="text-center bg-gray-100 text-gray-500"><NotFoundPage /></h2>;
     return (
         <div className='bg-gray-100 p-4'>
             <div className="flex flex-col md:flex-row gap-10  mb-10">

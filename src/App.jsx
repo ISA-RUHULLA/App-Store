@@ -21,7 +21,6 @@ function App() {
         <Route path="/installation" element={<Installation />} />
         <Route path="*" element={<ErrorPage />} />        
         <Route path="/apps" element={<NotFoundPage />} />        
-
       </Routes>
       <Footer />
       <Toaster/>
