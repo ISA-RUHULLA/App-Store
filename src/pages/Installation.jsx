@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import toast from 'react-hot-toast';
 import DownIcon from '../assets/icon-downloads.png'
 import RtIcon from '../assets/icon-ratings.png'
+import NotFoundIcon from '../assets/App-Error.png'
+import NotFoundPage from './NotFoundPage';
 
 
 const Installation = () => {
@@ -12,7 +14,7 @@ const Installation = () => {
         const installedIds = JSON.parse(localStorage.getItem("installedApps")) || [];
 
     
-        fetch("/public/appData.json")
+        fetch("appData.json")
             .then((res) => res.json())
             .then((data) => {
                 const apps = data.filter((app) => installedIds.includes(app.id));
@@ -37,7 +39,7 @@ const Installation = () => {
     });
 
     if (installedApps.length === 0) {
-        return <p className="text-center mt-10 text-red-500">No apps installed yet.</p>;
+        return <p className="text-center bg-white"><NotFoundPage/></p>;
     }
 
     return (
