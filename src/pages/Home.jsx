@@ -6,6 +6,7 @@ import Hero from '../assets/hero.png';
 import { useNavigate } from 'react-router-dom';
 import DownIcon from '../assets/icon-downloads.png'
 import RtIcon from '../assets/icon-ratings.png'
+import Loader from '../components/Loader';
 
 const Home = () => {
  const [apps, setApps] = useState([]);
@@ -24,7 +25,7 @@ const Home = () => {
             });
     }, []);
     if (loading) {
-        return <div>Loading...</div>;
+        return <div><Loader/></div>;
     }
     return (
         <div className='bg-gray-100 pb-5'>

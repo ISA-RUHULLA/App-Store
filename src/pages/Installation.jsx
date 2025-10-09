@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import toast from 'react-hot-toast';
+import { useNavigate } from 'react-router-dom';
 import DownIcon from '../assets/icon-downloads.png'
 import RtIcon from '../assets/icon-ratings.png'
-import NotFoundIcon from '../assets/App-Error.png'
-import NotFoundPage from './NotFoundPage';
+
 
 
 const Installation = () => {
     const [installedApps, setInstalledApps] = useState([]);
     const [sortBy, setSortBy] = useState("");
+    const navigate = useNavigate();
 
     useEffect(() => {
         const installedIds = JSON.parse(localStorage.getItem("installedApps")) || [];
@@ -39,8 +40,15 @@ const Installation = () => {
     });
 
     if (installedApps.length === 0) {
-        return <p className="text-center bg-white"><NotFoundPage/></p>;
-    }
+        return (
+            <div className='bg-gray-100 p-5'>
+                <p className="text-center text-black text-4xl font-bold">Apps Not Installed</p>
+                    <button onClick={() => navigate("/apps")} className='mt-4 bg-purple-500 text-white px-4 py-2 rounded-lg hover:bg-purple-600 cursor-pointer'>Go Back</button>
+            </div>
+        );
+                
+
+    };
 
     return (
         <div className="p-6 bg-gray-100">
