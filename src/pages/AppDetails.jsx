@@ -6,11 +6,12 @@ import RetIcon from '../assets/icon-ratings.png'
 import RevIcon from '../assets/icon-review.png'
 import ErrorPage from './ErrorPage';
 import AppRatingBar from './AppRatingBar';
+import Loader from "../components/Loader";
 
 const AppDetails = () => {
     const { id } = useParams();
     const [app, setApp] = useState();
-    const [loading, setLoading] = useState();
+    const [loading, setLoading] = useState(true);
     const [isInstalled, setInstalled] = useState(false);
     const navigate = useNavigate();
     useEffect(() => {
@@ -21,9 +22,9 @@ const AppDetails = () => {
                 console.log(found)
                 setApp(found);
                 setLoading(false);
-
-
             })
+            .catch(() => setLoading(false));
+
     }, [id]);
 
     useEffect(() => {
@@ -52,6 +53,10 @@ const AppDetails = () => {
 
     }
 
+    if (loading) {
+        return <Loader />;
+    }
+
     if (!app) return <h2 className="text-center mt-20 text-gray-500"><ErrorPage /></h2>;
     return (
         <div className='bg-gray-100 p-4'>
@@ -59,24 +64,24 @@ const AppDetails = () => {
                 <img src={app.image} alt={app.title} className="w-68 h-68 object-cover rounded-lg" />
                 <div className='w-full'>
                     <div className='text-start'>
-                        <h1 className="text-3xl font-bold">{app.title}</h1>
+                        <h1 className="text-3xl text-black font-bold">{app.title}</h1>
                         <p className="text-gray-600 mb-2">{app.companyName}</p>
                         <hr className="border-t-1 border-gray-400 w-full" />
                         <div className='flex gap-10 mt-6'>
                             <div >
                                 <img src={DownIcon} alt="" />
-                                <p>downloads</p>
-                                <p className='font-black text-2xl'>{app.downloads.toLocaleString()}</p>
+                                <p className='text-black'>downloads</p>
+                                <p className='font-black text-black text-2xl'>{app.downloads.toLocaleString()}</p>
                             </div>
                             <div >
                                 <img src={RetIcon} alt="" />
-                                <p>Average Ratings</p>
-                                <p className='font-black text-2xl'>{app.ratingAvg.toLocaleString()}</p>
+                                <p className='text-black'>Average Ratings</p>
+                                <p className='font-black text-black text-2xl'>{app.ratingAvg.toLocaleString()}</p>
                             </div>
                             <div >
                                 <img src={RevIcon} alt="" />
-                                <p>Total Reviews</p>
-                                <p className='font-black text-2xl'>{app.reviews.toLocaleString()}</p>
+                                <p className='text-black'>Total Reviews</p>
+                                <p className='font-black text-black text-2xl'>{app.reviews.toLocaleString()}</p>
                             </div>
                         </div>
                         <button onClick={handleInstall} className='btn font-bold text-2xl text-white mt-4 px-5 py-2 rounded-lg border bg-green-400'>{isInstalled ? "Installed" : `Install Now (${app.size})`}</button>
@@ -89,8 +94,8 @@ const AppDetails = () => {
                 <AppRatingBar ratingsData={(app.ratings)} />
             </div>
             <div className='flex flex-col text-start mt-7'>
-                <h1 className='font-bold text-2xl mb-3'>Description</h1>
-                <p>{app.description}</p>
+                <h1 className='font-bold text-2xl text-black mb-3'>Description</h1>
+                <p className='text-black'>{app.description}</p>
             </div>
         </div>
     );

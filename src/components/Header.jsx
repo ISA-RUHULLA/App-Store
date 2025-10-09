@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import logo from '../assets/logo.png';
 
 const Header = () => {
@@ -42,6 +44,7 @@ const Header = () => {
         target="_blank"
         className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600"
       >
+        <FontAwesomeIcon icon={faGithub} size="xl" className='mr-3'/>
         Contribution
       </a>
     </header>

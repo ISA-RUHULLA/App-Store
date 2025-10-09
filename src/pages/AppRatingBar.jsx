@@ -13,9 +13,10 @@ const AppRatingBar = ({ratingsData}) => {
  console.log("ratingsData", ratingsData)
   return (
     <div style={{ width: "100%", height: 300 }} >
-      <h3 className="font-bold text-2xl text-start">Ratings</h3>
+      <h3 className="font-bold text-2xl text-black text-start">Ratings</h3>
       <ResponsiveContainer width="100%" height="100%">
         <BarChart
+        className="text-black"
           layout="vertical"
           data={ratingsData}
           margin={{ top: 20, right: 30, left:0, bottom: 20 }}

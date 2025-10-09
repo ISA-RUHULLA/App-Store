@@ -4,6 +4,8 @@ import NotFoundPage from './NotFoundPage';
 import DownIcon from '../assets/icon-downloads.png'
 import RtIcon from '../assets/icon-ratings.png'
 
+import Loader from "../components/Loader";
+
 const AllApps = () => {
     const [apps, setApps] = React.useState([]);
     const [filtered, setFiltered] = React.useState([]);
@@ -19,21 +21,26 @@ const AllApps = () => {
                 setFiltered(data);
                 setLoading(false);
             })
+            .catch(() => setLoading(false));
     }, []);
 
     useEffect(() => {
         const result = apps.filter((app) => app.title.toLowerCase().includes(search.toLowerCase()));
         setFiltered(result);
     }, [apps, search]);
+
+     if (loading) {
+    return <Loader />;
+     }
     return (
         <div className='bg-gray-100 p-4'>
             <div>
-                <h1 className='text-5xl font-bold'>Our All Applications</h1>
+                <h1 className='text-5xl text-black font-bold'>Our All Applications</h1>
                 <p className='mt-4 text-gray-400'>Explore All Apps on the Market developed by us. We code for Millions</p>
             </div>
             <div className='flex justify-between items-center mt-8'>
-                <p className='mt-4 font-bold text-2xl'>({filtered.length}) Apps Found</p>
-                <input type="text" value={search} onChange={(e) => setSearch(e.target.value)} placeholder='Search Apps...' className='mt-2 p-2 w-full md:w-1/3 border border-gray-300 rounded' />
+                <p className='mt-4 font-bold text-black text-2xl'>({filtered.length}) Apps Found</p>
+                <input type="text" value={search} onChange={(e) => setSearch(e.target.value)} placeholder='Search Apps...' className='text-black mt-2 p-2 w-full md:w-1/3 border border-gray-300 rounded' />
             </div>
             {filtered.length > 0 ? (
                 <div className='mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>

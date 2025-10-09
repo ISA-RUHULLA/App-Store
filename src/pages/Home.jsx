@@ -1,4 +1,6 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGooglePlay, faAppStore } from '@fortawesome/free-brands-svg-icons';
 import { useEffect, useState } from 'react';
 import Hero from '../assets/hero.png';
 import { useNavigate } from 'react-router-dom';
@@ -25,10 +27,10 @@ const Home = () => {
         return <div>Loading...</div>;
     }
     return (
-        <div className='bg-gray-100'>
+        <div className='bg-gray-100 pb-5'>
                               {/* Banner Section */}
             <section>
-                <h1 className='text-7xl font-bold'>We Build
+                <h1 className='text-7xl font-bold text-black'>We Build
                     <br />
                     <span className='text-purple-500'>Productive</span> Apps
                 </h1>
@@ -40,15 +42,17 @@ const Home = () => {
                     <a
                         href="https://play.google.com/"
                         target="_blank"
-                        className="font-semibold border border-gray-500 px-6 py-2 rounded-lg"
+                        className="font-semibold text-black border border-gray-500 px-6 py-2 rounded-lg hover:bg-gray-200"
                     >
+                        <FontAwesomeIcon icon={faGooglePlay} size="xl" style={{ color: '#3DDC84' }} className='mr-3'/>
                         Play Store
                     </a>
                     <a
                         href="https://www.apple.com/app-store/"
                         target="_blank"
-                        className="font-semibold border border-gray-500 px-6 py-2 rounded-lg"
+                        className="font-semibold text-black border border-gray-500 px-6 py-2 rounded-lg hover:bg-gray-200"
                     >
+                        <FontAwesomeIcon icon={faAppStore} size="xl" style={{ color: '#007AFF' }} className='mr-3' />
                         App Store
                     </a>
                 </div>
@@ -84,7 +88,7 @@ const Home = () => {
                                           {/* App Section */}
             <section>
                 <div>
-                    <h1 className='text-4xl font-bold text-center mt-12'>Trending Apps</h1>
+                    <h1 className='text-4xl text-black font-bold text-center mt-12'>Trending Apps</h1>
                     <p className='text-center text-gray-600 mt-4'>Explore All Trending Apps on the Market developed by us</p>
                     
                 </div>
